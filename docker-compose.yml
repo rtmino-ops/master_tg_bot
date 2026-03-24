@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./app/data:/app/app/data   # база данных сохраняется на хосте
+    ports:
+      - "8080:8080"                # для YooKassa вебхуков
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

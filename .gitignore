@@ -1,0 +1,27 @@
+# Секреты — никогда не пушить!
+.env
+
+# База данных
+app/data/
+*.db
+*.sqlite
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Логи
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
